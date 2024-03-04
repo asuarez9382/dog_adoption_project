@@ -11,3 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title {
+  font-size: 32px; 
+  font-weight: bold; 
+  color: #ff6f61; 
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+}
+
+nav {
+  margin-bottom: 50px; /* Add margin to the bottom of the navbar */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555; 
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-size: 18px; 
+  font-weight: 600; 
+  transition: color 0.3s ease;
+  border-radius: 8px; 
+}
+
+.nav-link:hover {
+  color: #ff6f61; 
+  background-color: #f0f0f0; 
+}
+
+.nav-link.active {
+  color: #ff6f61; 
+}
+
+.animalCard {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 250px; /* Adjust width as needed */
+  text-align: center; /* Center align text */
+}
+
+.animalCard h3 {
+  margin-bottom: 8px;
+  color: #333; /* Match the color from before */
+}
+
+.animalCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.animalContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.dogBox,
+.catBox {
+  flex: 1; /* Equal width */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+}
+
+.dogList,
+.catList {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center list items horizontally */
+}
+
+
+
