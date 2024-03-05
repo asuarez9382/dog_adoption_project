@@ -10,7 +10,7 @@ const MyProvider = ({ children }) => {
   const [catList, setCatList] = useState([]); 
 
   useEffect(() => {
-    fetch("http://localhost:5555/pets")
+    fetch("http://localhost:3000/pets")
         .then(res => res.json())
         .then(petData => {
             setDogList(petData["dogs"])

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import AnimalCard from "./AnimalCard";
-import { AnimalContext } from '../AppContext'; // Adjust the import path accordingly
-
+import { AnimalContext } from "../App.Context"; 
 
 function CatList() {
 

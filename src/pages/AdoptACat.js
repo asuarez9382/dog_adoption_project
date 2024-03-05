@@ -1,12 +1,18 @@
 import React from "react";
-import { MyProvider } from "../AppContext";
+import { MyProvider } from "../App.Context";
 import CatList from "../components/CatList";
 
 function AdoptACat() {
 
     return (
     <MyProvider>
-        <CatList />
+        <div className="catBox">
+            <ul className="catList">
+                <li>
+                    <CatList />
+                </li>
+            </ul>
+        </div>
     </MyProvider>
         
     )

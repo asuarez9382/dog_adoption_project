@@ -1,13 +1,20 @@
 import React from "react";
 import DogList from "../components/DogList";
-import { MyProvider } from "../AppContext";
+import { MyProvider } from "../App.Context";
 
 function AdoptADog() {
 
 
     return (            
         <MyProvider>
-            <DogList />
+            <div className="dogBox">
+                <ul className="dogList">
+                    <li>
+                        <DogList />
+                    </li>
+                    
+                </ul>
+            </div>
         </MyProvider>
     )
 }
