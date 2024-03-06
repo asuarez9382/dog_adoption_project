@@ -24,11 +24,11 @@ function AdoptACat() {
             <div className="btn-container">
                 <button className="add-cat-btn" onClick={handleClick}>{addCatText}</button>
             </div>
-            { catForm ? <AdoptionForm/> : ''}
+            { catForm ? <AdoptionForm animalType="cats"/> : ''}
             <div className="catBox">
                 <ul className="catList">
                     <li>
-                        <CatList />
+                        <CatList animalType="cats"/>
                     </li>
                     
                 </ul>

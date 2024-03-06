@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import DogList from "../components/DogList";
 import { MyProvider } from "../App.Context";
 import AdoptionForm from "../components/AdoptionForm";
-import { AnimalContext } from "../App.Context"; 
+import { AnimalContext } from "../App.Context";
+ 
 
 function AdoptADog() {
 
     const { dogForm, setDogForm, addDogText, setAddDogText } = useContext(AnimalContext)
+
 
     function handleClick() {
         setDogForm(!dogForm)
@@ -24,11 +26,11 @@ function AdoptADog() {
             <div className="btn-container">
                 <button className="add-dog-btn" onClick={handleClick}>{addDogText}</button>
             </div>
-            { dogForm ? <AdoptionForm/> : ''}
+            { dogForm ? <AdoptionForm animalType="dogs"/> : ''}
             <div className="dogBox">
                 <ul className="dogList">
                     <li>
-                        <DogList />
+                        <DogList animalType="dogs" />
                     </li>
                     
                 </ul>

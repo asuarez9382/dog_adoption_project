@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import AnimalCard from "./AnimalCard";
 import { AnimalContext } from "../App.Context"; 
 
-function DogList() {
+function DogList({ animalType }) {
 
     const  { dogList }  = useContext(AnimalContext);
 
@@ -18,6 +18,7 @@ function DogList() {
                     price={dog.price}
                     image={dog.image}
                     isAdopted={dog.isAdopted}
+                    animalType={animalType}
                 />
             ))}
         </>

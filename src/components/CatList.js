@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import AnimalCard from "./AnimalCard";
 import { AnimalContext } from "../App.Context"; 
 
-function CatList() {
+function CatList({ animalType }) {
 
     const  { catList } = useContext(AnimalContext);
 
+    
     return(
         <>
             {catList.map(cat => (
@@ -16,6 +17,7 @@ function CatList() {
                     price={cat.price}
                     image={cat.image}
                     isAdopted={cat.isAdopted}
+                    animalType={animalType}
                 />
             ))}
         </>

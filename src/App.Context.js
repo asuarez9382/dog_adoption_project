@@ -14,6 +14,8 @@ const MyProvider = ({ children }) => {
   const [addDogText, setAddDogText] = useState("Add Dog to Adoption List")
   const [addCatText, setAddCatText] = useState("Add Cat to Adoption List")
 
+  
+  
   useEffect(() => {
     fetch("http://localhost:3000/pets")
         .then(res => res.json())

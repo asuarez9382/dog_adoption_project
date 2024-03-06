@@ -185,3 +185,23 @@ nav {
   max-width: 400px; /* Limit the maximum width of the form container */
   margin: 0 auto; /* Center the form container horizontally */
 }
+
+.adopt-btn {
+  background-color: #ff6f61; /* Coral color */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px; /* Smaller font size */
+  border-radius: 5px; /* Smaller border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px; /* Add margin */
+}
+
+.adopt-btn:hover {
+  background-color: #d85345; /* Darker coral color */
+}
+

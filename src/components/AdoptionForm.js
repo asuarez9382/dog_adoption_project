@@ -3,18 +3,18 @@ import { AnimalContext } from "../App.Context";
 
 
 
-function AdoptionForm() {
+function AdoptionForm({ animalType }) {
 
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
     const [isAdopted, setIsAdopted] = useState(false);
 
-    
+    console.log(animalType)
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(name,image,price)
+
     }
 
 
