@@ -6,6 +6,7 @@ const AnimalContext = React.createContext();
 
 
 const MyProvider = ({ children }) => {
+  
   const [dogList, setDogList] = useState( []); 
   const [catList, setCatList] = useState([]); 
   const [dogForm, setDogForm] = useState(false);
@@ -36,7 +37,8 @@ const MyProvider = ({ children }) => {
             addCatText,
             setAddCatText,
             catForm,
-            setCatForm } }    
+            setCatForm}
+        }    
     >
         { children }
     </AnimalContext.Provider>

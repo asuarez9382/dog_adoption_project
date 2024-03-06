@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AnimalContext } from "../App.Context"; 
 
 
 
@@ -9,10 +10,13 @@ function AdoptionForm() {
     const [price, setPrice] = useState('');
     const [isAdopted, setIsAdopted] = useState(false);
 
+    
+
     function handleSubmit(e) {
         e.preventDefault()
         console.log(name,image,price)
     }
+
 
 
     return(
@@ -33,7 +37,7 @@ function AdoptionForm() {
                     <input type="number" className="input-field" value={price} onChange={(e) => setPrice(e.target.value)} required />
                 </label>
                 <br />
-                <button className="add-btn" type="submit">Add Dog</button>
+                <button className="add-btn" type="submit">Add Pet</button>
             </form>
         </div>
         

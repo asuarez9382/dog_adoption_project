@@ -65,7 +65,13 @@ nav {
   height: auto;
   border-radius: 8px;
   margin-bottom: 8px;
+  transition: transform 0.3s ease; /* Add transition effect */
 }
+
+.animalCard img:hover {
+  transform: scale(1.03); /* Zoom in by 10% on hover */
+}
+
 
 .animalContainer {
   display: flex;
