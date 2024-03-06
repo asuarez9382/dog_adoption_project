@@ -8,6 +8,8 @@ const AnimalContext = React.createContext();
 const MyProvider = ({ children }) => {
   const [dogList, setDogList] = useState( []); 
   const [catList, setCatList] = useState([]); 
+  const [dogForm, setDogForm] = useState(false);
+  const [addDogText, setAddDogText] = useState("Add Dog to Adoption List")
 
   useEffect(() => {
     fetch("http://localhost:3000/pets")
@@ -20,7 +22,15 @@ const MyProvider = ({ children }) => {
 
   return (
     <AnimalContext.Provider
-        value={ { dogList, setDogList, catList, setCatList } }    
+        value={ { 
+            dogList, 
+            setDogList, 
+            catList, 
+            setCatList,
+            dogForm,
+            setDogForm,
+            addDogText,
+            setAddDogText } }    
     >
         { children }
     </AnimalContext.Provider>
