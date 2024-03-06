@@ -9,7 +9,9 @@ const MyProvider = ({ children }) => {
   const [dogList, setDogList] = useState( []); 
   const [catList, setCatList] = useState([]); 
   const [dogForm, setDogForm] = useState(false);
+  const [catForm, setCatForm] = useState(false)
   const [addDogText, setAddDogText] = useState("Add Dog to Adoption List")
+  const [addCatText, setAddCatText] = useState("Add Cat to Adoption List")
 
   useEffect(() => {
     fetch("http://localhost:3000/pets")
@@ -30,7 +32,11 @@ const MyProvider = ({ children }) => {
             dogForm,
             setDogForm,
             addDogText,
-            setAddDogText } }    
+            setAddDogText,
+            addCatText,
+            setAddCatText,
+            catForm,
+            setCatForm } }    
     >
         { children }
     </AnimalContext.Provider>

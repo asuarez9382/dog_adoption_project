@@ -16,8 +16,8 @@ function AdoptionForm() {
 
 
     return(
-        <div className="dog-form-container">
-            <form className="add-dog-form" onSubmit={handleSubmit}>
+        <div className="form-container">
+            <form className="add-animal-form" onSubmit={handleSubmit}>
                 <label>
                     Name:
                     <input type="text" className="input-field" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -33,7 +33,7 @@ function AdoptionForm() {
                     <input type="number" className="input-field" value={price} onChange={(e) => setPrice(e.target.value)} required />
                 </label>
                 <br />
-                <button className="add-dog-btn" type="submit">Add Dog</button>
+                <button className="add-btn" type="submit">Add Dog</button>
             </form>
         </div>
         

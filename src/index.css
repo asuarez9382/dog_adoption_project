@@ -108,6 +108,27 @@ nav {
   background-color: #f0f0f0;
 }
 
+.add-cat-btn {
+  background-color: white;
+  border: none;
+  color: #555;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; 
+  font-weight: 600; 
+  transition: color 0.3s ease;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.add-cat-btn:hover {
+  color: #ff6f61; 
+  background-color: #f0f0f0;
+}
+
 .btn-container {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -115,17 +136,17 @@ nav {
 }
 
 /* Styles for the Add Dog form */
-.add-dog-form {
+.add-animal-form {
   text-align: center; /* Center align form elements */
 }
 
-.add-dog-form label {
+.add-animal-form label {
   display: block; /* Display labels as block elements */
   margin-bottom: 8px; /* Add spacing between labels */
   color: #555; /* Match the color from before */
 }
 
-.add-dog-form .input-field {
+.add-animal-form .input-field {
   padding: 8px; /* Reduce padding for input fields */
   margin-bottom: 16px; /* Add spacing between input fields */
   width: 100%; /* Make input fields full width */
@@ -133,7 +154,7 @@ nav {
   border-radius: 8px; /* Match border radius */
 }
 
-.add-dog-form button.add-dog-btn {
+.add-animal-form button.add-btn {
   background-color: #ff6f61; /* Change background color of the button */
   border: none;
   color: #fff; /* Change text color of the button */
@@ -149,12 +170,12 @@ nav {
   border-radius: 8px;
 }
 
-.add-dog-form button.add-dog-btn:hover {
+.add-animal-form button.add-btn:hover {
   background-color: #ff564b; /* Change background color on hover */
   color: #fff; /* Change text color on hover */
 }
 
-.dog-form-container {
+.form-container {
   max-width: 400px; /* Limit the maximum width of the form container */
   margin: 0 auto; /* Center the form container horizontally */
 }
