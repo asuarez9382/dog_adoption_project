@@ -12,6 +12,30 @@ function AnimalCard({ id, name, image, price, isAdopted, animalType }){
 
     function handleClick() {
         console.log("clicked")
+
+        fetch(`http://localhost:3000/pets/${animalType}/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            // Add any additional headers if needed
+            },
+            body: JSON.stringify({ isAdopted: true }), // Update isAdopted to true
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Parse response body as JSON
+        })
+        .then(data => {
+            // Handle updated data from the server
+            console.log('Updated animal data:', data);
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error updating animal data:', error);
+        });
+
     }
 
     return(
@@ -28,3 +52,5 @@ function AnimalCard({ id, name, image, price, isAdopted, animalType }){
 }
 
 export default AnimalCard;
+
+//Figure out how to get the routes for the database postman perhaps?
