@@ -12,7 +12,7 @@ function AnimalList() {
             <div className="dogBox">
                 <ul className="dogList">
                     <li>
-                        <DogList />
+                        <DogList animalType="dogs"/>
                     </li>
                     
                 </ul>
@@ -20,7 +20,7 @@ function AnimalList() {
             <div className="catBox">
                 <ul className="catList">
                     <li>
-                        <CatList />
+                        <CatList animalType="cats"/>
                     </li>
                 </ul>
             </div>

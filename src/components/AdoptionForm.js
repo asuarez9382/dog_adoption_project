@@ -10,7 +10,7 @@ function AdoptionForm({ animalType }) {
     const [price, setPrice] = useState('');
     const [isAdopted, setIsAdopted] = useState(false);
 
-    console.log(animalType)
+    
 
     function handleSubmit(e) {
         e.preventDefault()

@@ -17,12 +17,17 @@ const MyProvider = ({ children }) => {
   
   
   useEffect(() => {
-    fetch("http://localhost:3000/pets")
+    fetch("http://localhost:3000/dogs")
         .then(res => res.json())
-        .then(petData => {
-            setDogList(petData["dogs"])
-            setCatList(petData["cats"])
+        .then(dogData => {
+            setDogList(dogData)
         })
+
+    fetch("http://localhost:3000/cats")
+      .then(res => res.json())
+      .then(catData => {
+        setCatList(catData)
+      })
     }, [])
 
   return (

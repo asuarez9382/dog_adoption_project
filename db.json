@@ -1,50 +1,48 @@
 {
-    
-      "dogs": [
-        {
-          "id": 1,
-          "name": "Mochi",
-          "image":"https://petpress.net/wp-content/uploads/2019/11/shib86.jpg",
-          "price":4000.00,
-          "isAdopted": false
-        },
-        {
-          "id": 2,
-          "name": "Ozzy",
-          "image":"https://cdn.fotofits.com/petzlover/gallery/img/l/border-collie-850169.jpg",
-          "price":1000.00,
-          "isAdopted": false
-        },
-        {
-          "id": 3,
-          "name": "Bella",
-          "image":"https://www.rd.com/wp-content/uploads/2016/01/04-dog-breeds-dalmation.jpg",
-          "price":1500.00,
-          "isAdopted": false
-        }
-      ],
-      "cats":[
-        {
-          "id": 4,
-          "name": "Ramsey",
-          "image":"https://pulpbits.net/wp-content/uploads/2014/01/Tabby-Cat-Images.jpg",
-          "price":300.00,
-          "isAdopted": false
-        },
-        {
-          "id": 5,
-          "name": "Racer",
-          "image":"https://www.mystart.com/blog/wp-content/uploads/shutterstock_137532869-e1520615431283.jpg",
-          "price":400.00,
-          "isAdopted": false
-        },
-        {
-          "id": 6,
-          "name": "Tempi",
-          "image":"https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg",
-          "price":300.00,
-          "isAdopted": false
-        }
-      ]
-    
-  }
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Mochi",
+      "image": "https://petpress.net/wp-content/uploads/2019/11/shib86.jpg",
+      "price": 4000,
+      "isAdopted": false
+    },
+    {
+      "id": 2,
+      "name": "Ozzy",
+      "image": "https://cdn.fotofits.com/petzlover/gallery/img/l/border-collie-850169.jpg",
+      "price": 1000,
+      "isAdopted": false
+    },
+    {
+      "id": 3,
+      "name": "Bella",
+      "image": "https://www.rd.com/wp-content/uploads/2016/01/04-dog-breeds-dalmation.jpg",
+      "price": 1500,
+      "isAdopted": false
+    }
+  ],
+  "cats": [
+    {
+      "id": 4,
+      "name": "Ramsey",
+      "image": "https://pulpbits.net/wp-content/uploads/2014/01/Tabby-Cat-Images.jpg",
+      "price": 300,
+      "isAdopted": false
+    },
+    {
+      "id": 5,
+      "name": "Racer",
+      "image": "https://www.mystart.com/blog/wp-content/uploads/shutterstock_137532869-e1520615431283.jpg",
+      "price": 400,
+      "isAdopted": false
+    },
+    {
+      "id": 6,
+      "name": "Tempi",
+      "image": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg",
+      "price": 300,
+      "isAdopted": false
+    }
+  ]
+}

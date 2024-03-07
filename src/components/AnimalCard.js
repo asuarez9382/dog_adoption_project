@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { AnimalContext } from "../App.Context";
 
 
 function AnimalCard({ id, name, image, price, isAdopted, animalType }){
 
+    const { setCatList, setDogList } = useContext(AnimalContext)
+
+    useEffect(() => {
+        fetch("http://localhost:3000/dogs")
+            .then(res => res.json())
+            .then(dogData => {
+                setDogList(dogData)
+            })
+    
+        fetch("http://localhost:3000/cats")
+          .then(res => res.json())
+          .then(catData => {
+            setCatList(catData)
+          })
+        }, [isAdopted])
 
     function handleImageClick() {
         console.log("clicked")
@@ -13,28 +29,29 @@ function AnimalCard({ id, name, image, price, isAdopted, animalType }){
     function handleClick() {
         console.log("clicked")
 
-        fetch(`http://localhost:3000/pets/${animalType}/${id}`, {
+        fetch(`http://localhost:3000/${animalType}/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
-            // Add any additional headers if needed
+            
             },
-            body: JSON.stringify({ isAdopted: true }), // Update isAdopted to true
+            body: JSON.stringify({ isAdopted: true }), 
         })
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json(); // Parse response body as JSON
+            return response.json(); 
         })
         .then(data => {
-            // Handle updated data from the server
+            
             console.log('Updated animal data:', data);
         })
         .catch(error => {
             // Handle errors
             console.error('Error updating animal data:', error);
         });
+        
 
     }
 
@@ -53,4 +70,3 @@ function AnimalCard({ id, name, image, price, isAdopted, animalType }){
 
 export default AnimalCard;
 
-//Figure out how to get the routes for the database postman perhaps?
