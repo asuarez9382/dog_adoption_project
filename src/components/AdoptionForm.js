@@ -8,12 +8,45 @@ function AdoptionForm({ animalType }) {
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
-    const [isAdopted, setIsAdopted] = useState(false);
-
     
+
+    const { dogList, setDogList, catList, setCatList } = useContext(AnimalContext)
 
     function handleSubmit(e) {
         e.preventDefault()
+
+        fetch(`http://localhost:3000/${animalType}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                image: image,
+                price: price,
+                isAdopted: false,
+            }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('New dog data:', data);
+            if(animalType === 'dogs') {
+                return setDogList([...dogList, data])
+            }
+            else if(animalType === 'cats') {
+                return setCatList([...catList, data])
+            }
+
+        })
+        .catch(error => {
+            console.error('Error adding new dog:', error);
+        });
+
 
     }
 
@@ -47,3 +80,5 @@ function AdoptionForm({ animalType }) {
 
 
 export default AdoptionForm ;
+
+//Add PUT request functionality and figure out what to do with imageClick
