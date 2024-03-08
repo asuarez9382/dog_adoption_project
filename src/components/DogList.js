@@ -6,7 +6,7 @@ function DogList({ animalType }) {
 
     const  { dogList }  = useContext(AnimalContext);
 
-    console.log(dogList)
+    
 
     return(
         <>
