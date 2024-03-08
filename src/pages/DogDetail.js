@@ -1,12 +1,13 @@
-import React from "react";
-import { useParams } from "react-router-dom"; 
+import React, { useContext } from "react";
+import { useParams } from "react-router-dom";
+
 
 function DogDetail() {
 
-    const params = useParams();
+    const {id} = useParams();
 
     return(
-        <h1>Dog Details</h1>
+        <h1>Dog Details: {id} </h1>
     )
 }
 

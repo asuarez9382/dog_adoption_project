@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { AnimalContext } from "../App.Context";
+import { Link } from "react-router-dom";
 
 function AnimalCard({ id, name, image, price, isAdopted, animalType }) {
   const { catList, setCatList, dogList, setDogList } = useContext(AnimalContext);
@@ -21,11 +22,6 @@ function AnimalCard({ id, name, image, price, isAdopted, animalType }) {
     }
   }, [setCatList,setDogList]);
 
-  //Doesn't have functionality yet
-  function handleImageClick() {
-    console.log("Clicked on", name, "image");
-    // Perform additional actions if needed
-  }
 
   //Performs a PATCH request updating the database to show isAdopted = true for the animal clicked
   function handleClick() {
@@ -78,7 +74,9 @@ function AnimalCard({ id, name, image, price, isAdopted, animalType }) {
   return (
     <div className="animalCard">
       <h3>{name}</h3>
-      <img src={image} alt="animal" onClick={handleImageClick} />
+      <Link to={`/${animalType}/${id}`}>
+        <img src={image} alt="animal" />
+      </Link>
       <p>Price: ${price}</p>
       <span>{isAdopted ? "Adopted" : "Available"}</span>
       <div className="btn-container">
