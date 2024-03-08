@@ -3,11 +3,14 @@ import { AnimalContext } from "../App.Context";
 
 
 
+
 function AdoptionForm({ animalType }) {
 
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
+
+    
     
 
     const { dogList, setDogList, catList, setCatList } = useContext(AnimalContext)
@@ -47,7 +50,7 @@ function AdoptionForm({ animalType }) {
             console.error('Error adding new dog:', error);
         });
 
-
+        window.location.href = '/'
     }
 
 
@@ -81,4 +84,3 @@ function AdoptionForm({ animalType }) {
 
 export default AdoptionForm ;
 
-//Add PUT request functionality and figure out what to do with imageClick
