@@ -10,14 +10,12 @@ function DogDetail() {
 
     const filteredDog = dogList.filter(dog => dog.id === parseInt(id))
 
-    const { name, image, price, isAdopted } = filteredDog
-
     return(
         <div className="animalCard">
-            <h3>{name}</h3>
-            <img src={image} alt="animal" />
-            <p>Price: ${price}</p>
-            <span>{isAdopted ? "Adopted" : "Available"}</span>
+            <h3>{filteredDog[0].name}</h3>
+            <img src={filteredDog[0].image} alt="animal" />
+            <p>Price: ${filteredDog[0].price}</p>
+            <span>{filteredDog[0].isAdopted ? "Adopted" : "Available"}</span>
         </div>
     )
 }
