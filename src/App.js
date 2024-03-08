@@ -5,6 +5,8 @@ import AdoptACat from "./pages/AdoptACat";
 import AdoptADog from "./pages/AdoptADog";
 import ErrorPage from "./pages/ErrorPage"
 import Header from "./components/Header";
+import DogDetail from "./pages/DogDetail";
+import CatDetail from "./pages/CatDetail";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Routes> 
           <Route path="/" element={<Home />} /> 
           <Route path="/cats" element={<AdoptACat />} /> 
+          <Route path="/cats/:id" element={<CatDetail />} />
           <Route path="/dogs" element={<AdoptADog />} /> 
           <Route path="/dogs/:id" element={<DogDetail />} />
           <Route path="*" element={<ErrorPage />} /> 
