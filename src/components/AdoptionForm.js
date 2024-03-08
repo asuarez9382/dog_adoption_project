@@ -14,7 +14,7 @@ function AdoptionForm({ animalType }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-
+        
         fetch(`http://localhost:3000/${animalType}`, {
             method: 'POST',
             headers: {
@@ -23,7 +23,7 @@ function AdoptionForm({ animalType }) {
             body: JSON.stringify({
                 name: name,
                 image: image,
-                price: price,
+                price: parseInt(price),
                 isAdopted: false,
             }),
         })
