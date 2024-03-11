@@ -21,12 +21,8 @@ function DogDetail() {
                 With their loyal and affectionate demeanor, {filteredDog[0].name} makes a wonderful companion for active individuals and families alike
             </p>
         </div>
-
-
-
     )
 }
 
 export default DogDetail;
 
-//Add general details about the dogDetail and catDetail pages

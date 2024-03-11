@@ -7,7 +7,6 @@ function DogList({ animalType }) {
     const  { dogList }  = useContext(AnimalContext);
 
     
-
     return(
         <>
             {dogList.map(dog => (

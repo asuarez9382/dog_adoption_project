@@ -52,4 +52,4 @@ const MyProvider = ({ children }) => {
   );
 };
 
-export { MyProvider, AnimalContext}; // Exporting the contexts to be used elsewhere
+export { MyProvider, AnimalContext}; 
