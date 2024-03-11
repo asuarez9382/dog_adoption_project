@@ -205,3 +205,37 @@ nav {
   background-color: #d85345; /* Darker coral color */
 }
 
+
+.pet-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Divide the container into two columns */
+  align-items: center;
+  gap: 20px; /* Add some space between elements */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pet-image {
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  grid-row: span 2; /* Make the image span two rows */
+}
+
+.pet-name {
+  grid-column: 1 / span 2; /* Center the name and price */
+  text-align: center; /* Center the text */
+}
+
+.pet-paragraph {
+  grid-column: 2 / span 1; /* Position the paragraph in the second column */
+}
+
+.pet-price {
+  grid-column: 1; /* Position the price in the first column */
+  text-align: center;
+}
+
+
+
