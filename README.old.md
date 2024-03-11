@@ -1,1 +1,0 @@
-# dog_adoption_project
