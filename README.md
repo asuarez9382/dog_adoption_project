@@ -9,7 +9,8 @@ Welcome to the Pet Adoption App! This web application is designed to help users 
 - **Adoption Status:** Keep track of each pet's adoption status to see which ones are still available and which ones have found their forever homes.
 <div align='center'>
   
-  ![video1118746151-ezgif com-video-to-gif-converter](https://github.com/asuarez9382/dog_adoption_project/assets/12467862/5497f7c6-be43-484a-a4ba-c93fa7d3a178)
+  ![video1007040793-ezgif com-optimize](https://github.com/asuarez9382/dog_adoption_project/assets/12467862/7c8c7235-b2ac-44c2-b7a6-9bdd02458a70)
+
   
 </div>
 
